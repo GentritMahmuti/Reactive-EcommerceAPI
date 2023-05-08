@@ -29,8 +29,6 @@ public class UserService {
    * NotFoundException extends Exception on failure if instance of NotFoundException recover with
    * custom message else throw
    *
-   * @param id
-   * @return
    */
   public Uni<User> getUserById(int id) {
     return repository
@@ -62,6 +60,7 @@ public class UserService {
    * send as query param current user id, allow to delete if current user is SuperAdmin, throw
    * NotAllowedActionException
    */
+  //Test Commit
   public Uni<Void> deleteUser(int id, int currentUserId) {
 
     return getUserById(currentUserId)
